@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Swift Card View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="AMGSwiftCardViewController" customModule="DeckOfCardObjC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmz-ar-W43">
+                                <rect key="frame" x="169" y="99.666666666666671" width="37.333333333333343" height="26.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XdV-zY-B8d">
+                                <rect key="frame" x="21" y="156" width="333.33333333333331" height="500"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="EEN-kM-h78"/>
+                                    <constraint firstAttribute="width" secondItem="XdV-zY-B8d" secondAttribute="height" multiplier="2:3" id="gWa-BA-AM3"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmr-lF-HPe">
+                                <rect key="frame" x="134" y="706" width="107" height="30"/>
+                                <state key="normal" title="Draw New Card">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="drawCardButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TUR-9R-7iS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XdV-zY-B8d" firstAttribute="top" secondItem="dmz-ar-W43" secondAttribute="bottom" constant="30" id="44t-z3-SHi"/>
+                            <constraint firstItem="XdV-zY-B8d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5lQ-99-ONA"/>
+                            <constraint firstItem="mmr-lF-HPe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H7v-3q-Xhx"/>
+                            <constraint firstItem="mmr-lF-HPe" firstAttribute="top" secondItem="XdV-zY-B8d" secondAttribute="bottom" constant="50" id="HGl-f6-fmH"/>
+                            <constraint firstItem="XdV-zY-B8d" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Z0o-zh-dPI"/>
+                            <constraint firstItem="dmz-ar-W43" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="whT-0w-a4q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cardImageView" destination="XdV-zY-B8d" id="xCb-Ul-cOu"/>
+                        <outlet property="drawCardButton" destination="mmr-lF-HPe" id="c1u-Vw-TjE"/>
+                        <outlet property="suitLabelOutlet" destination="dmz-ar-W43" id="VmL-bg-wXu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-118" y="149"/>
+        </scene>
+    </scenes>
+</document>
